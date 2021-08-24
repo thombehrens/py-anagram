@@ -38,7 +38,7 @@ def get_valid_pairs(valid_words, letters):
             pair = first_word_letters + list(valid_words[i])
             if collections.Counter(pair) == collections.Counter(letters):
                 valid_pairs.append(word + ", " + valid_words[i])
-                i += 1
+            i += 1
     return valid_pairs
 
 
