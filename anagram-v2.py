@@ -18,26 +18,25 @@ def get_bad_words():
 def get_valid_words(all_words, bad_words, anagram_word):
     valid_words = all_words.copy()
     for word in all_words:
-        if len(Counter(word) - Counter(anagram_word)) > 0:
+        if len(Counter(word.lower()) - Counter(anagram_word)) > 0:
             valid_words.remove(word)
-        elif word in bad_words:
+        elif word.lower() in bad_words:
             valid_words.remove(word)
     return valid_words
 
 
 def print_valid_pairs(valid_words, anagram_word):
-    for index, first_word in enumerate(valid_words):
+    for index, word in enumerate(valid_words):
+        first_word = word.lower()
         i = index + 1
         while i < len(valid_words):
-            second_word = valid_words[i]
+            second_word = valid_words[i].lower()
             if Counter(first_word + second_word) == Counter(anagram_word):
                 print(anagram_word, " = ", first_word, " + ", second_word)
             i += 1
 
 
-# TODO: Case insensitivity
-
-anagram_word = "DOCUMENTING"
+anagram_word = "documenting"
 all_words = get_words()
 bad_words = get_bad_words()
 valid_words = get_valid_words(all_words, bad_words, anagram_word)
