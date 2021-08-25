@@ -23,5 +23,29 @@ Execution times:
 48.45626997947693 seconds
 48.42616391181946 seconds
 
+## [Version 2][3]
+
+Ok: I tried getting rid of the `find_valid_words` and it totally failed... I gave the program about 10 minutes to churn through it and it didn't come back.
+
+I did make a few quality of life improvements, basically by delegating the logic of each comparison to [collections.Counter()][4], which is an awesome library.
+
+There are a few unsavory words that you can make from the letters in "documenting", so I also added in a step that takes out profanity 🙂.
+
+That ended up prompting the need to put in case insensitivity, since the bad words dictionary is lowercase/case sensitive.
+
+Execution times:
+48.79525709152222 seconds
+51.45167803764343 seconds
+51.307101249694824 seconds
+
+A fun and unexpected aside: I've been measuring execution times on my personal laptop, which is a mid-2020 MacBook Air with an Intel i5 chip. In addition to this project, this week I also set up an ubuntu ssh server on an old laptop I have, an early-2015 MacBook Pro with an Intel i7 chip. It was really slow (and hot, and loud) as a 6-year old Mac (I had really put it through the ringer) - but as a new Ubuntu machine, it is flying through this code.
+
+Execution times (on the i7 Ubuntu):
+8.063069581985474 seconds
+7.864361047744751 seconds
+7.677416086196899 seconds
+
 [1]: https://codingdojo.org/kata/Anagram/
 [2]: https://github.com/thombehrens/py-anagram/blob/master/anagram-v1.py
+[3]: https://github.com/thombehrens/py-anagram/blob/master/anagram-v2.py
+[4]: https://www.pythonforbeginners.com/collection/python-collections-counter
