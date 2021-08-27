@@ -45,6 +45,23 @@ Execution times (on the i7 Ubuntu):
 7.864361047744751 seconds
 7.677416086196899 seconds
 
+## [Version 3][5]
+
+Ok: For this version I didn't change any of the search/sort logic.
+
+But I refactored the methods to grab the words lists, and added a piece to store the lists locally so that if you run the program more than once it's not making repeated network calls.
+
+Why would you run the program more than once, you ask? Because I also added the ability to pass a word in as a command line argument.
+
+Joey said that storing the files locally made his program run in under 1 second... I will have to take a look at his code and see what he's doing to get it that fast! Mine is still very slow.
+
+First python project: done! 🥳
+
+Execution times:
+8.129892349243164 seconds
+8.322694540023804 seconds
+8.495978593826294 seconds
+
 [1]: https://codingdojo.org/kata/Anagram/
 [2]: https://github.com/thombehrens/py-anagram/blob/master/anagram-v1.py
 [3]: https://github.com/thombehrens/py-anagram/blob/master/anagram-v2.py
