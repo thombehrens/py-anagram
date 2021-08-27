@@ -66,3 +66,4 @@ Execution times:
 [2]: https://github.com/thombehrens/py-anagram/blob/master/anagram-v1.py
 [3]: https://github.com/thombehrens/py-anagram/blob/master/anagram-v2.py
 [4]: https://www.pythonforbeginners.com/collection/python-collections-counter
+[5]: https://github.com/thombehrens/py-anagram/blob/master/anagram-v3.py
